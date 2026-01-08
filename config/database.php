@@ -11,9 +11,9 @@ if($is_local){
 } else {
     //BBDD EN PRODUCCIÓN -> INFINITY FREE
     $host = 'sql101.infinityfree.com';
-    $user = 'if0_40822799';
-    $password = '6DJ5uHZwXpII';
-    $database = 'if0_40822799_tienda_db';
+    $user = '';
+    $password = '';
+    $database = '';
 }
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //Realizo la conexión
@@ -26,4 +26,5 @@ try{
     error_log("Error en DB[".date('Y-m-d H:i:s')."]: ". $e->getMessage(). " en archivo: ".$e->getFile(). ": ".$e->getLine());
     die ("Error en conexión a base de datos: ".mysqli_connect_error());
 }
+
 ?>
